@@ -1,0 +1,20 @@
+# ai-outfit-generator runtime config
+version = "0.4.2"
+log_level = "INFO"
+auto_fetch_weights = true
+max_wardrobe_items = 5000
+default_season = "all"
+render_backend = "onnx"
+
+# render_backend = "diffusers"  # heavier, nicer output, needs CUDA
+# render_backend = "stub"       # deterministic placeholders, for tests
+
+[render]
+steps = 24
+guidance = 7.5
+resolution = [768, 1024]
+
+[styling]
+palette_weight = 0.42
+formality_weight = 0.31
+weather_weight = 0.27
